@@ -4,11 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Task 
 * server site Design
+* clint site design 
+* slider add 
+* blog section add 
+* home section a 6 product add 
 * privete route set up 
 * install react authintication hook 
 * log in and registation design and set authintication 
 * 12+ commit
-* 2 extra sectionn   
+* 2 extra section add   
 
 ## description 
 this projects has I had done server side and backend and clint site . this projects I am not setisfyed to do this projets and and I will do batter In next assignment.
