@@ -4,6 +4,7 @@ import Navber from './Components/Header/Navber/Navber';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from './Components/Header/Navber/Slider/Slider';
 import Product from './Components/Product/Product';
+import Order from './Components/Order/Order';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path='/' element={<h1>hello react home </h1>}></Route>
         <Route path='/home' element={<Slider></Slider>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
-        <Route path='/product/:orderId' element={<h1>hello react home1 </h1>}></Route>
+        <Route path='/product/:orderId' element={<Order></Order>}></Route>
         <Route path='/addproduct' element={<h1>hello react home 2</h1>}></Route>
         <Route path='/updateproduct' element={<h1>hello react home 3</h1>}></Route>
         <Route path='/manageproduct' element={<h1>hello react home 4</h1>}></Route>
