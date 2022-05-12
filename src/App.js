@@ -6,6 +6,7 @@ import Slider from './Components/Header/Navber/Slider/Slider';
 import Product from './Components/Product/Product';
 import Order from './Components/Order/Order';
 import Fotter from './Components/Fotter/Fotter';
+import LogIn from './Components/LogIn/LogIn';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path='/manageproduct' element={<h1>hello react home 4</h1>}></Route>
         <Route path='/order' element={<h1>hello react home 5</h1>}></Route>
         <Route path='/blogs' element={<h1>hello react home 6</h1>}></Route>
-        <Route path='/Login' element={<h1>hello react home 7</h1>}></Route>
+        <Route path='/Login' element={<LogIn></LogIn>}></Route>
         <Route path='/registation' element={<h1>hello react home 7</h1>}></Route>
         <Route path='*' element={<h1>hello react home 8</h1>}></Route>
       </Routes>
