@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Task 
+* server site Design
+* privete route set up 
+* install react authintication hook 
+* log in and registation design and set authintication 
+* 12+ commit
+* 2 extra sectionn   
+
+## description 
+this projects has I had done server side and backend and clint site . this projects I am not setisfyed to do this projets and and I will do batter In next assignment.
+
+[assignment-11 live link](https://github.com/jonikumardas/jon-inventory-assignment)
+
 ## Available Scripts
 
 In the project directory, you can run:
