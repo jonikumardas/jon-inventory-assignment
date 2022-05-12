@@ -2,6 +2,8 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navber from './Components/Header/Navber/Navber';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Slider from './Components/Header/Navber/Slider/Slider';
+import Product from './Components/Product/Product';
 
 function App() {
   return (
@@ -9,8 +11,8 @@ function App() {
       <Navber></Navber>
       <Routes>
         <Route path='/' element={<h1>hello react home </h1>}></Route>
-        <Route path='/home' element={<h1>hello react home </h1>}></Route>
-        <Route path='/product' element={<h1>hello react home1 </h1>}></Route>
+        <Route path='/home' element={<Slider></Slider>}></Route>
+        <Route path='/product' element={}></Route>
         <Route path='/product/:orderId' element={<h1>hello react home1 </h1>}></Route>
         <Route path='/addproduct' element={<h1>hello react home 2</h1>}></Route>
         <Route path='/updateproduct' element={<h1>hello react home 3</h1>}></Route>
