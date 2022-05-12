@@ -28,22 +28,22 @@ const Addproduct = () => {
         <div className='container-fluid'>
            
             <Form onSubmit={eventHandel} className="w-50 mx-auto">
-                  <h3 className="text-center">add product</h3>
+                  <h3 className="text-center">Add product</h3>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Product name</Form.Label>
-          <Form.Control type="text" name="name" placeholder="product name" />
+          <Form.Control type="text" name="name" placeholder="product name" required />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Product balance</Form.Label>
-          <Form.Control type="text" name="balance" placeholder="balance" />
+          <Form.Control type="text" name="balance" placeholder="balance" required />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Image link</Form.Label>
-          <Form.Control type="text" name="picture" placeholder="product image link" />
+          <Form.Control type="text" name="picture" placeholder="product image link" required />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="all is right " />
+          <Form.Check type="checkbox" label="Iam sure all is right " required />
         </Form.Group>
         <Button variant="primary" type="submit">
         Add Product

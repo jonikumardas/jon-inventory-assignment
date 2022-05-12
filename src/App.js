@@ -9,6 +9,7 @@ import Fotter from './Components/Fotter/Fotter';
 import LogIn from './Components/LogIn/LogIn';
 import Registaiton from './Components/Registation/Registaiton';
 import NotFound from './Components/NotFound/NotFound';
+import Addproduct from './Components/Addproduct/Addproduct';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path='/home' element={<Slider></Slider>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/product/:orderId' element={<Order></Order>}></Route>
-        <Route path='/addproduct' element={<h1>hello react home 2</h1>}></Route>
+        <Route path='/addproduct' element={<Addproduct></Addproduct>}></Route>
         <Route path='/updateproduct' element={<h1>hello react home 3</h1>}></Route>
         <Route path='/manageproduct' element={<h1>hello react home 4</h1>}></Route>
         <Route path='/order' element={<h1>hello react home 5</h1>}></Route>
