@@ -11,6 +11,7 @@ import Registaiton from './Components/Registation/Registaiton';
 import NotFound from './Components/NotFound/NotFound';
 import Addproduct from './Components/Addproduct/Addproduct';
 import Blog from './Components/Blog/Blog';
+import Requirauth from './Components/RequerAuth/Requirauth';
 
 function App() {
   return (
@@ -20,11 +21,27 @@ function App() {
         <Route path='/' element={<Slider></Slider>}></Route>
         <Route path='/home' element={<Slider></Slider>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
-        <Route path='/product/:orderId' element={<Order></Order>}></Route>
-        <Route path='/addproduct' element={<Addproduct></Addproduct>}></Route>
-        <Route path='/updateproduct' element={<h1>update page </h1>}></Route>
-        <Route path='/manageproduct' element={<h1>manage page </h1>}></Route>
-        <Route path='/order' element={<Order></Order>}></Route>
+        <Route path='/product/:orderId' element={
+          <Requirauth>
+            <Order></Order>
+              </Requirauth>
+         }></Route>
+        <Route path='/addproduct' element={
+          <Requirauth>
+            <Addproduct></Addproduct>
+          </Requirauth>
+          }></Route>
+        <Route path='/updateproduct' element={
+          <Requirauth>
+            <h1>update page </h1>
+          </Requirauth>
+         }></Route>
+        <Route path='/manageproduct' element={<Requirauth>
+          <h1>manage page </h1>
+        </Requirauth>}></Route>
+        <Route path='/order' element={<Requirauth>
+          <Order></Order>
+        </Requirauth>}></Route>
         <Route path='/blogs' element={<Blog></Blog>}></Route>
         <Route path='/Login' element={<LogIn></LogIn>}></Route>
         <Route path='/registation' element={<Registaiton></Registaiton>}></Route>

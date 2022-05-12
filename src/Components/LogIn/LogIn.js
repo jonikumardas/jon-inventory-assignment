@@ -20,11 +20,11 @@ const LogIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
    
-    const navigate = useNavigate( );
-   
+    const navigate = useNavigate();
     let location = useLocation();
-    let [user] = useAuthState(auth);
-  let from = location.state?.from?.pathname || "/";
+    let {user} = useAuthState(auth);
+    console.log([user]);
+    let from = location.state?.from?.pathname || "/";
 
     const hendelEmailChange = event => {
         setEmail(event.target.value);
@@ -43,16 +43,8 @@ const LogIn = () => {
             </div>
         )
     }
-    const signWithGoogle = () => {
-        signInWithGoogle() 
-
-    }
     if (user) {
        navigate(from, { replace: true })
-    }
-    const signWithGithub = () => {
-        signInWithGithub() && navigate('/order')
-        
     }
     
     return (
@@ -62,7 +54,7 @@ const LogIn = () => {
             <h2 className='text-info text-center'> Log In </h2>
                 <input onBlur={hendelEmailChange}  id="email" className='px-5 py-2 my-2 border-0' type="email" placeholder='Enter your email addess' required />
                 <br />
-                <input onBlur={hendelpassword} id="password" type="password" className='px-5 my-2 py-2 border-0' placeholder='Enter your email addess' required />
+                <input onBlur={hendelpassword} id="password" type="password" className='px-5 my-2 py-2 border-0' placeholder='Enter your password' required />
                     <br />
                     <p className='text-danger'>{error}</p>
                     <button className='px-3 py-2 my-2 border-0' id="submit" type="submit">Log in</button>
@@ -70,8 +62,8 @@ const LogIn = () => {
                 <p> Don't have account? <Link to="/registation"><span id='link' className='text-danger mt-2'>Please Register</span></Link></p>
                 <hr />
 
-                <button onClick={() => signWithGoogle(auth)} id="email" className='px-5 py-2 my-2 border-0' type="submit "><img src={google} alt="" /> Sign In with Google</button> <br />
-               <button onClick={() => signWithGithub(auth)} id="email" className='px-5 py-2 my-2 border-0 text-gray' type="submit "><img src={git} alt="" /> Sign In with Github </button>
+                <button onClick={() => signInWithGoogle(auth)} id="email" className='px-5 py-2 my-2 border-0' type="submit "><img src={google} alt="" /> Sign In with Google</button> <br />
+               <button onClick={() => signInWithGithub(auth)} id="email" className='px-5 py-2 my-2 border-0 text-gray' type="submit "><img src={git} alt="" /> Sign In with Github </button>
                <ToastContainer />
               </div>
             
