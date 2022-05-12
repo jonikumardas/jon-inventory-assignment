@@ -23,7 +23,6 @@ const LogIn = () => {
     const navigate = useNavigate();
     let location = useLocation();
     let {user} = useAuthState(auth);
-    console.log([user]);
     let from = location.state?.from?.pathname || "/";
 
     const hendelEmailChange = event => {
@@ -43,7 +42,7 @@ const LogIn = () => {
             </div>
         )
     }
-    if (user) {
+    if (user1) {
        navigate(from, { replace: true })
     }
     
