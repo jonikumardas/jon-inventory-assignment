@@ -3,9 +3,9 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='conatiner bg-black ' style={{color:'white' }}>
-            <div className="row mx-auto ">
+            <div className="row mx-auto ms-md-5 ms-none ">
                 <div className="col-md-12">
-                    <div className="row">
+                    <div className="row me-2">
                        <div className="col-md-5 border ms-2 m-3 shadow "style={{background:'#130f40' }}>
                          <h2>Javascript vs Node js </h2>
                           <p><span className='text-info'>Javascript </span>

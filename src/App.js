@@ -17,14 +17,14 @@ function App() {
     <div>
       <Navber></Navber>
       <Routes>
-        <Route path='/' element={<h1>hello react home </h1>}></Route>
+        <Route path='/' element={<Slider></Slider>}></Route>
         <Route path='/home' element={<Slider></Slider>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/product/:orderId' element={<Order></Order>}></Route>
         <Route path='/addproduct' element={<Addproduct></Addproduct>}></Route>
-        <Route path='/updateproduct' element={<h1>hello react home 3</h1>}></Route>
-        <Route path='/manageproduct' element={<h1>hello react home 4</h1>}></Route>
-        <Route path='/order' element={<h1>hello react home 5</h1>}></Route>
+        <Route path='/updateproduct' element={<h1>update page </h1>}></Route>
+        <Route path='/manageproduct' element={<h1>manage page </h1>}></Route>
+        <Route path='/order' element={<Order></Order>}></Route>
         <Route path='/blogs' element={<Blog></Blog>}></Route>
         <Route path='/Login' element={<LogIn></LogIn>}></Route>
         <Route path='/registation' element={<Registaiton></Registaiton>}></Route>

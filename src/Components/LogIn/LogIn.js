@@ -10,12 +10,12 @@ import auth from '../Firebase/Firebase.init';
 const LogIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleuser, loading1, error1] = useSignInWithGoogle(auth);
     const [signInWithGithub, gituser, gitloading, giterror] = useSignInWithGoogle(auth);
     // log in email password 
     const [
         signInWithEmailAndPassword,
-        user4,
+        user1,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
@@ -70,8 +70,8 @@ const LogIn = () => {
                 <p> Don't have account? <Link to="/registation"><span id='link' className='text-danger mt-2'>Please Register</span></Link></p>
                 <hr />
 
-                <button onClick={() => signWithGoogle()} id="email" className='px-5 py-2 my-2 border-0' type="submit "><img src={google} alt="" /> Sign In with Google</button> <br />
-               <button onClick={() => signWithGithub()} id="email" className='px-5 py-2 my-2 border-0 text-gray' type="submit "><img src={git} alt="" /> Sign In with Github </button>
+                <button onClick={() => signWithGoogle(auth)} id="email" className='px-5 py-2 my-2 border-0' type="submit "><img src={google} alt="" /> Sign In with Google</button> <br />
+               <button onClick={() => signWithGithub(auth)} id="email" className='px-5 py-2 my-2 border-0 text-gray' type="submit "><img src={git} alt="" /> Sign In with Github </button>
                <ToastContainer />
               </div>
             

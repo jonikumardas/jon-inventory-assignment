@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../Firebase/Firebase.init';
 
@@ -10,11 +10,14 @@ const Registaiton = () => {
   const [repassword, setRepassword] = useState('');
   const [
     createUserWithEmailAndPassword,
-    user,
+    user1,
     loading,
     error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+     let location = useLocation();
+    let [user] = useAuthState(auth);
+  let from = location.state?.from?.pathname || "/";
     
     const takeEmail = e => {
         setEmail(e.target.value);
@@ -28,7 +31,7 @@ const Registaiton = () => {
     const register = e => {
         e.preventDefault();
         if (password === repassword) {
-            createUserWithEmailAndPassword(email, password) && navigate('/order');
+            createUserWithEmailAndPassword(email, password)
         }
     }
     if (error) {
@@ -37,6 +40,9 @@ const Registaiton = () => {
               <p>Sorry: {error.message}</p>
             </div>
           );
+    }
+    if (user) {
+        navigate(from, { replace: true })
     }
 
     return (
