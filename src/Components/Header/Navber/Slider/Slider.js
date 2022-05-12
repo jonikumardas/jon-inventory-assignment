@@ -55,7 +55,7 @@ const Slider = () => {
         <div className='container-fluid mb-5 p-5 bg-black text-center '>
           <h1 className='text-white'>Our spacial services </h1>
           <h2 className='text-gray'>spacial stock {products.length}</h2>
-          <div className="row">
+          <div className="row justify-content-evenly">
           {
             products.map(product => <Services key={product._id}
             product={product}

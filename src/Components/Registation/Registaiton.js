@@ -43,7 +43,7 @@ const Registaiton = () => {
         <div className='bg-black mt-5'>
             <div className='  mt-5 loginform '>
             <form onSubmit={register}>
-            <h2 className='text-info text-center'> Log In </h2>
+            <h2 className='text-info text-center'> Register now  </h2>
                 <input onBlur={takeEmail} id="email" className='px-5 py-2 my-2 border-0' type="email" placeholder='Enter your email addess' required />
                 <br />
                 <input onBlur={takePassword}  id="password" type="password" className='px-5 my-2 py-2 border-0' placeholder='Enter your password' required />
@@ -51,7 +51,7 @@ const Registaiton = () => {
                     <br />
                     <button className='px-3 py-2 my-2 border-0' id="submit" type="submit">Registaiton</button>
                 </form>
-                <p> Don't have account? <Link to="/login"><span id='link' className='text-danger mt-2'>Log In</span></Link></p>
+                <p> Already have account? <Link to="/login"><span id='link' className='text-danger mt-2'>Log In</span></Link></p>
                 
 
                 

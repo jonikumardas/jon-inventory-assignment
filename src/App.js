@@ -8,6 +8,7 @@ import Order from './Components/Order/Order';
 import Fotter from './Components/Fotter/Fotter';
 import LogIn from './Components/LogIn/LogIn';
 import Registaiton from './Components/Registation/Registaiton';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path='/blogs' element={<h1>hello react home 6</h1>}></Route>
         <Route path='/Login' element={<LogIn></LogIn>}></Route>
         <Route path='/registation' element={<Registaiton></Registaiton>}></Route>
-        <Route path='*' element={<h1>hello react home 8</h1>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Fotter></Fotter>
       
