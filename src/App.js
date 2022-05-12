@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from './Components/Header/Navber/Slider/Slider';
 import Product from './Components/Product/Product';
 import Order from './Components/Order/Order';
+import Fotter from './Components/Fotter/Fotter';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/registation' element={<h1>hello react home 7</h1>}></Route>
         <Route path='*' element={<h1>hello react home 8</h1>}></Route>
       </Routes>
+      <Fotter></Fotter>
       
     </div>
   );
