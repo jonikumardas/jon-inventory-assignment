@@ -10,6 +10,7 @@ import LogIn from './Components/LogIn/LogIn';
 import Registaiton from './Components/Registation/Registaiton';
 import NotFound from './Components/NotFound/NotFound';
 import Addproduct from './Components/Addproduct/Addproduct';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path='/updateproduct' element={<h1>hello react home 3</h1>}></Route>
         <Route path='/manageproduct' element={<h1>hello react home 4</h1>}></Route>
         <Route path='/order' element={<h1>hello react home 5</h1>}></Route>
-        <Route path='/blogs' element={<h1>hello react home 6</h1>}></Route>
+        <Route path='/blogs' element={<Blog></Blog>}></Route>
         <Route path='/Login' element={<LogIn></LogIn>}></Route>
         <Route path='/registation' element={<Registaiton></Registaiton>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
