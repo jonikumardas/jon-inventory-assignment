@@ -1,9 +1,12 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import Navber from './Components/Header/Navber/Navber';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
+      <Navber></Navber>
       <Routes>
         <Route path='/' element={<h1>hello react home </h1>}></Route>
         <Route path='/home' element={<h1>hello react home </h1>}></Route>
